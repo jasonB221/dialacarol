@@ -25,5 +25,5 @@ function returnData(submitted){
   } else {
     songName = submitted[2];
   }
-  return {'city':submitted[4], 'state':submitted[5], 'country':submitted[6], 'song':songName, 'key':"878a0658e652765c4979dba411787e43"};
+  return {'city':submitted[4], 'state':submitted[5], 'country':submitted[6], 'song':songName, 'key':"shared_key"};
 }

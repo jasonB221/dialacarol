@@ -19,7 +19,7 @@
   $country = (isset($_POST["country"])? strtolower($_POST["country"]): "");
   
   //Open up a DB connection to store the geocode info
-  $db_connection = new mysqli($db_host, $db_user, $db_password, $db_name, $db_port);
+  $db_connection = new mysqli($db_host, $db_user, $db_pass, $db_name, $db_port);
   if($db_connection->connect_errno){
     http_response_code(500);
 //    echo "Failed to connect to MySQL: (" . $db_connection->connect_errno . ") " . $db_connection->connect_error;
