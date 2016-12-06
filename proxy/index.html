@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="manifest" href="manifest.json" >
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <title>Dial-a-Carol 2016 Call Log</title>
+</head>
+<body>
+    <div id="counter"><h1>There have been <span id="count">0</span> calls answered so far!    <span id="mariah">0</span> have involved Mariah Carey!</h1></div>
+    <div id="map" style="height: 800px;">The map is currently loading.<noscript>This page requires javascript to work. If you don't enable javascript, you won't be able to see anything.</noscript></div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA8ghozoQmSqOIfkYjcUsMnyYlXj82HjuY",
+            authDomain: "dial-a-carol.firebaseapp.com",
+            databaseURL: "https://dial-a-carol.firebaseio.com",
+            storageBucket: "dial-a-carol.appspot.com",
+            messagingSenderId: "551905331000"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="/js/markercluster.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/addcall.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgoKqJ5EV6yfZOqSSzx-uhrrcH8KBCxMM&callback=initMap"></script>
+</body>
+
+</html>

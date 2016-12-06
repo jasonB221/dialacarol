@@ -1,0 +1,40 @@
+<Files "settings.php">
+  Order Allow,Deny
+  Deny from All
+</Files>
+
+<Files "addcall.php">
+  Order Deny,Allow
+  
+  Allow from All
+  
+  #Allow from google scripts servers
+  Allow from 64.18.0.0/20
+  Allow from 64.233.160.0/19
+  Allow from 66.102.0.0/20
+  Allow from 66.249.80.0/20
+  Allow from 72.14.192.0/18
+  Allow from 74.125.0.0/16
+  Allow from 173.194.0.0/16
+  Allow from 207.126.144.0/20
+  Allow from 209.85.128.0/17
+  Allow from 216.239.32.0/19
+  
+  #Allow from my house
+  Allow from 73.211.92.155
+  
+  #Allow from UIUC Campus
+  Allow from 128.174.0.0/16
+  Allow from 130.126.0.0/16
+  Allow from 192.17.0.0/16
+  Allow from 72.36.64.0/18
+  Allow from 130.126.255.127
+  
+  #Deny from anywhere else
+  #Deny from All
+</Files>
+
+<FilesMatch "php_info\.php|fcm_log\.txt">
+  Order Allow,Deny
+  Allow from 73.211.92.155
+</FilesMatch>
