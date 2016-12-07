@@ -5,7 +5,7 @@
   if($key !== $_POST["key"]){
     http_response_code(403);
     print_r($_POST);
-    echo $key;
+    printf("Given key: %s. Actual key: %s.\n", $_POST["key"], $key);
     exit(1);
   }
   
