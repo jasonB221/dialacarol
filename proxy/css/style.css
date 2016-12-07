@@ -13,3 +13,10 @@
     margin: 0 auto;
     margin-bottom: 5px;
 }
+
+@media (min-height: 945px){
+    #map{
+        height: 800px;
+        width: 1050px;
+    }
+}
