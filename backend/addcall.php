@@ -4,8 +4,8 @@
   //If keys don't match, return 403
   if($key !== $_POST["key"]){
     http_response_code(403);
-    print_r($_POST);
-    printf("Given key: %s. Actual key: %s.\n", $_POST["key"], $key);
+//    print_r($_POST);
+//    printf("Given key: %s. Actual key: %s.\n", $_POST["key"], $key);
     exit(1);
   }
   
