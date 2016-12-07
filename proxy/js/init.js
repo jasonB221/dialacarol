@@ -7,7 +7,7 @@ function initMap(){
     setupNotifications();
     markers = {};
     markerCluster = new MarkerClusterer(map, markers, 
-        {imagePath: '/images/m', gridSize: 15});
+        {imagePath: '/images/m', gridSize: 18});
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
         if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
