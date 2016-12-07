@@ -20,24 +20,27 @@
         width: 1050px;
     }
     #container{
-        
+        position: relative;
     }
     #mariah-counter{
         left: 40px;
-        bottom: 350px;
+        bottom: 160px;
     }
     #song-counter{
         left: 40px;
-        bottom: 150px;
+        bottom: 230px;
     }
     .counter-box{
-        position: relative;
+        position: absolute;
         display: block;
         font-size: 18px;
         color: #207EA9;
         text-align: center;
-        width: 200px;
-        height: 150px;
+        width: 110px;
+        background-color: rgba(230,230,230,0.4);
+        z-index: 100;
+        padding: 5px;
+        border-radius: 10px;
     }
     .counter{
         color: #9C9BAA;
