@@ -17,7 +17,7 @@
 @media (min-height: 945px){
     #map{
         height: 800px;
-        width: 1050px;
+        width: 90%;
         margin: 0 auto;
     }
     #container{
@@ -41,7 +41,7 @@
         padding: 5px;
         border-radius: 10px;
         left: 50%;
-        margin-left: -450px;
+        margin-left: -700px;
     }
     .counter{
         color: #9C9BAA;
