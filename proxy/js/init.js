@@ -54,26 +54,14 @@ function setupNotifications(){
     });
 }
 function setupRecieving(currToken, messaging){
-    console.log("The current token is: " + currToken);
     messaging.onMessage(function(payload) {
-        console.log("Message recieved. ", payload);
         addCall(payload['data']['song'], payload['data']['lat'], payload['data']['lng']);
     });
     const channel = new BroadcastChannel('dialacarol');
     channel.onmessage = function(e) {
-        console.log("Message recieved. ", e);
-        if(e['data'] == "opentab"){
-            window.focus();
-            return;
-        }
         addCall(e['data']['song'], e['data']['lat'], e['data']['lng']);
     }
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() {
-        if(xmlHttp.readyState == 4){
-            console.log(xmlHttp.responseText);
-        }
-    }
     xmlHttp.open("GET", "https://dialacarol.bilas.org/registertopic.php?topic=songs&regtoken=" + currToken, true);
     xmlHttp.send(null);
 }

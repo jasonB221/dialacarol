@@ -9,7 +9,6 @@ const messaging = firebase.messaging();
 
 messaging.setBackgroundMessageHandler(function(payload){
   var data = payload['data'];
-  console.log(data);
   const channel = new BroadcastChannel('dialacarol');
   channel.postMessage(data);
   
@@ -33,7 +32,6 @@ messaging.setBackgroundMessageHandler(function(payload){
   });
   
   self.addEventListener('alertclosed', function(event){
-    console.log("Closed");
     self.showingNotification = false;
   });
 
