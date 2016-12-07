@@ -128,7 +128,7 @@
   
   //Now format the request to send to the FCM servers
   $fcm_array = array(
-    "to" => "/topics/dev",
+    "to" => "/topics/songs",
     "data" => $song
   );
   $fcm_json = json_encode($fcm_array);
