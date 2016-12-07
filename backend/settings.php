@@ -17,7 +17,7 @@
   $api_key = "maps_api_key";
   
   //Stores the API token for sending FCM messages
-  $fcm_token = "token";
+  $fcm_token = "firebase_messaging_token";
   
   $fcm_header_array = array(
     "Content-Type: application/json",
