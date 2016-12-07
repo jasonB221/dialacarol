@@ -4,6 +4,8 @@
   //If keys don't match, return 403
   if($key !== $_POST["key"]){
     http_response_code(403);
+    print_r($_POST);
+    echo $key;
     exit(1);
   }
   
@@ -126,7 +128,7 @@
   
   //Now format the request to send to the FCM servers
   $fcm_array = array(
-    "to" => "/topics/songs",
+    "to" => "/topics/dev",
     "data" => $song
   );
   $fcm_json = json_encode($fcm_array);
