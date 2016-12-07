@@ -19,4 +19,27 @@
         height: 800px;
         width: 1050px;
     }
+    #container{
+        
+    }
+    #mariah-counter{
+        left: 40px;
+        bottom: 350px;
+    }
+    #song-counter{
+        left: 40px;
+        bottom: 150px;
+    }
+    .counter-box{
+        position: relative;
+        display: block;
+        font-size: 18px;
+        color: #207EA9;
+        text-align: center;
+        width: 200px;
+        height: 150px;
+    }
+    .counter{
+        color: #9C9BAA;
+    }
 }
