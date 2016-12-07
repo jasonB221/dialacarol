@@ -144,6 +144,6 @@
   curl_close($request);
   
   //We are done executing the script. The rest of the statements are for debugging only.
-  file_put_contents("fcm_log.txt", $response);
+  //file_put_contents("fcm_log.txt", $response);
   
 ?>
