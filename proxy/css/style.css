@@ -27,10 +27,10 @@ body{
         position: relative;
     }
     #mariah-counter{
-        bottom: 70px;
+        bottom: 120px;
     }
     #song-counter{
-        bottom: 140px;
+        bottom: 190px;
     }
     .counter-box{
         position: absolute;
