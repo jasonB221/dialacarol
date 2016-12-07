@@ -17,7 +17,6 @@ body{
     background-color: rgba(230, 230, 230, 0.5);
 }
 
-@media (min-height: 945px){
     #map{
         height: 800px;
         width: 90%;
@@ -50,4 +49,3 @@ body{
     .counter{
         color: #9C9BAA;
     }
-}
