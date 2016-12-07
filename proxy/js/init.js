@@ -7,7 +7,7 @@ function initMap(){
     setupNotifications();
     markers = {};
     markerCluster = new MarkerClusterer(map, markers, 
-        {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+        {imagePath: '/images/m', gridSize: 15});
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
         if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
