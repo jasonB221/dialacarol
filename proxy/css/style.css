@@ -1,7 +1,13 @@
+#top{
+    text-align: center;
+}
 #dialacarol{
-    color: #207ea9;
+    color: #207EA9;
     font-family: 'Amatic SC', cursive;
     font-size: 80px;
     margin: 0 auto;
-    text-align: center;
+}
+#tradition{
+    color: #9C9BAA;
+    font-size: 20px;
 }
