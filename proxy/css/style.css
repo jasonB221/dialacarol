@@ -24,12 +24,10 @@
         position: relative;
     }
     #mariah-counter{
-        left: 40px;
-        bottom: 160px;
+        bottom: 60px;
     }
     #song-counter{
-        left: 40px;
-        bottom: 230px;
+        bottom: 120px;
     }
     .counter-box{
         position: absolute;
@@ -42,6 +40,8 @@
         z-index: 100;
         padding: 5px;
         border-radius: 10px;
+        left: 50%;
+        margin-left: -550px;
     }
     .counter{
         color: #9C9BAA;
