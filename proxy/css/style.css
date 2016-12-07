@@ -13,12 +13,16 @@
     margin: 0 auto;
     margin-bottom: 5px;
 }
+body{
+    background-color: rgba(230, 230, 230, 0.5);
+}
 
 @media (min-height: 945px){
     #map{
         height: 800px;
         width: 90%;
         margin: 0 auto;
+        border-radius: 20px;
     }
     #container{
         position: relative;
