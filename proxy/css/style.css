@@ -1,18 +1,21 @@
 #top{
     text-align: center;
 }
+//title
 #dialacarol{
     color: #207EA9;
     font-family: 'Amatic SC', cursive;
     font-size: 80px;
     margin: 0 auto;
 }
+//subtitle
 #tradition{
     color: #9C9BAA;
     font-size: 20px;
     margin: 0 auto;
     margin-bottom: 5px;
 }
+//all of it
 body{
     background-color: rgba(230, 230, 230, 0.5);
 }
@@ -27,6 +30,7 @@ body{
         position: relative;
     }
     #mariah-counter{
+		color:#19962F;
         bottom: 120px;
     }
     #song-counter{
@@ -44,7 +48,7 @@ body{
         padding: 5px;
         border-radius: 10px;
         left: 50%;
-        margin-left: -700px;
+        margin-left: -630px;
     }
     .counter{
         color: #9C9BAA;
