@@ -1,21 +1,21 @@
 #top{
     text-align: center;
 }
-//title
+/*title*/
 #dialacarol{
     color: #207EA9;
     font-family: 'Amatic SC', cursive;
     font-size: 80px;
     margin: 0 auto;
 }
-//subtitle
+/*subtitle*/
 #tradition{
     color: #9C9BAA;
     font-size: 20px;
     margin: 0 auto;
     margin-bottom: 5px;
 }
-//all of it
+/*all of it*/
 body{
     background-color: rgba(230, 230, 230, 0.5);
 }
