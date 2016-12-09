@@ -1,5 +1,4 @@
 function respondToSubmission(e) {
-  if(!shouldSubmit(e.values)){return;}
   
   var encodedData = returnData(e.values);
   var options = {
@@ -10,14 +9,6 @@ function respondToSubmission(e) {
   UrlFetchApp.fetch("http://bilas2.web.engr.illinois.edu/addcall.php", options)
 }
 
-function shouldSubmit(submitted){
-  var city, state, country;
-  city = submitted[4];
-  state = submitted[5];
-  country = submitted[6];
-  return ((city != "") || (state != "") || (country != ""));
-}
-
 function returnData(submitted){
   var songName;
   if(submitted[2] == ""){
@@ -25,5 +16,9 @@ function returnData(submitted){
   } else {
     songName = submitted[2];
   }
-  return {'city':submitted[4], 'state':submitted[5], 'country':submitted[6], 'song':songName, 'key':"shared_key"};
+  var country = submitted[6];
+  if(submitted[4] == "" && submitted[5] == "" && submitted[6] == ""){
+    country = "us";
+  }
+  return {'city':submitted[4], 'state':submitted[5], 'country':country, 'song':songName, 'key':"shared_key"};
 }
