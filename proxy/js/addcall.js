@@ -14,6 +14,7 @@ function addCall(song, latitude, longitude){
 
   //This section updates the call counters
   document.getElementById("count").innerHTML = parseInt(document.getElementById("count").innerHTML)+1; //Update raw call count
+  //console.log("Added a call.");
   if(song.indexOf("(Mariah Carey)") !== -1){
 	  document.getElementById("mariah").innerHTML = parseInt(document.getElementById("mariah").innerHTML)+1; //Update Mariah meter
   }
