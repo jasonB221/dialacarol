@@ -30,14 +30,11 @@ messaging.setBackgroundMessageHandler(function(payload){
     }));
     event.notification.close();
   });
-  
-  self.addEventListener('alertclosed', function(event){
-    self.showingNotification = false;
-  });
 
   return self.registration.getNotifications().then(function(notifications){
-    if(notifications && notifications.length > 0)
+    if(notifications && notifications.length > 0){
         return;
+    }
     return self.registration.showNotification(title, options);
   });
 });
