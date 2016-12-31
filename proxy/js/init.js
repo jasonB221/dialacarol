@@ -5,7 +5,10 @@ function initMap(){
         center: {lat:19.4582, lng:12.837838},
         mapTypeId: 'roadmap'
     });
-    setupNotifications();
+    
+    //Disable recieving new calls. Map is for info/historical purposes only now.
+    //setupNotifications();
+    
     markers = {}; //Initialize it with zero markers
     markerCluster = new MarkerClusterer(map, markers, 
         {imagePath: '/images/m', gridSize: 18});

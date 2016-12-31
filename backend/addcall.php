@@ -1,4 +1,9 @@
 <?php
+
+  http_response_code(500);
+  echo "This page is no longer active when Dial-A-Carol isn't happening."
+  exit(0); //Stop processing.
+  
   require_once(__DIR__."/settings.php");
   
   //If keys don't match, return 403
