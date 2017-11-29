@@ -1,4 +1,4 @@
-cd proxy/
+cd web/
 cp -r * /var/www/dialacarol/public_html/
 cd ../backend/
 sed -e "s/shared_key/$SHAREDKEY/g" settings.php > settings.php.tmp && mv settings.php.tmp settings.php
