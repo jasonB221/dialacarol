@@ -1,9 +1,3 @@
-#Take care of NPM dependencies
-npm prune
-npm install
-npm install -g firebase-tools
-npm install -g uglify-es
-
 #Handle frontend deployment
 mkdir ./build
 cd web/
