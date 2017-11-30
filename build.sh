@@ -23,6 +23,10 @@ cd ../build/
 cp -r ./* /var/www/dialacarol/public_html/
 #Deploy to cloud hosting
 firebase deploy --token "$DEPLOY_TOKEN" --project "$FIREBASE_PROJECT_ID" --only hosting
+
+#Handle function deployment
+cd ../functions/
+npm install
 firebase deploy --token "$DEPLOY_TOKEN" --project "$FIREBASE_PROJECT_ID" --only functions
 
 #Take care of backend variable replacement
