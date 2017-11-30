@@ -22,7 +22,7 @@ cleancss -O2 --output ../build/style.min.css ./css/*.css
 cd ../build/
 cp -r ./* /var/www/dialacarol/public_html/
 #Deploy to cloud hosting
-firebase deploy --token 1/XSBnHmNEEZZjlJXQqOeCMbsheS1VxMVU6IEio3uBLbc --only hosting
+firebase deploy --token "$DEPLOY_TOKEN" --only hosting
 
 #Take care of backend variable replacement
 cd ../backend/
