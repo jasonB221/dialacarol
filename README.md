@@ -9,7 +9,7 @@ This project is designed to allow for [Dial-a-Carol][dialacarol] participants to
   2. If not, ask Google for location data and add it to the database for future reference
   3. Write the location and song name to a json file for clients to pull when initially connecting
   4. Send a Firebase notification to all the connected clients
-* The [client](proxy/index.html) registers a [service worker](proxy/firebase-messaging-sw.js) which recieves the notification, and processes it.
+* The [client](web/index.html) registers a [service worker](web/firebase-messaging-sw.js) which recieves the notification, and processes it.
 * The map is updated with another marker.
 
 #### License
