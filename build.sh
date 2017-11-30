@@ -21,6 +21,8 @@ cleancss -O2 --output ../build/style.min.css ./css/*.css
 #Copy files to local server
 cd ../build/
 cp -r ./* /var/www/dialacarol/public_html/
+#Deploy to cloud hosting
+firebase deploy --token 1/XSBnHmNEEZZjlJXQqOeCMbsheS1VxMVU6IEio3uBLbc --only hosting
 
 #Take care of backend variable replacement
 cd ../backend/
