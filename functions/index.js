@@ -13,6 +13,6 @@ admin.initializeApp(functions.config().firebase);
  * It is passed a query named token, and replies with a 200 status code.
  */
 exports.registerNotifications = functions.https.onRequest((req, res) => {
-    admin.messaging().app.subscribeToTopic(req.query.token, "songs-" + ((new Date()).getFullYear());
+    admin.messaging().app.subscribeToTopic(req.query.token, "songs-" + ((new Date()).getFullYear()));
     res.status(200).end();
 });
