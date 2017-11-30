@@ -1,4 +1,6 @@
 #Handle frontend deployment
+#Clean previous build directory
+rm -rf ./build
 mkdir ./build
 cd web/
 #Copy web files over to local server
@@ -16,6 +18,7 @@ uglifyjs firebase-messaging-sw.js --compress --output firebase-messaging-sw.js
 #Copy JS back over to local server
 cd ../build/
 cp dialacarol.min.js /var/www/dialacarol/public_html/dialacarol.min.js
+rm /var/www/dialacarol/public_html/firebase-messaging-sw.js
 cp firebase-messaging-sw.js /var/www/dialacarol/public_html/firebase-messaging-sw.js
 
 #Take care of backend variable replacement
