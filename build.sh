@@ -2,24 +2,23 @@
 #Clean previous build directory
 rm -rf ./build
 mkdir ./build
-cd web/
-#Copy web files over to local server
-cp -r * /var/www/dialacarol/public_html/
 #Copy web files to deployment server
+cd web/
 cp -r * ../build/
 cd ../build/
 #Delete Javascript files
 rm -rf js
 rm *.js
-#Minify JS files
+#Minify all the files
 cd ../web/
 uglifyjs ./js/*.js --compress --output ../build/dialacarol.min.js
 uglifyjs firebase-messaging-sw.js --compress --output ../build/firebase-messaging-sw.js
-#Copy JS back over to local server
+html-minifier --collapse-whitespace --quote-value \' --remove-comments --remove-tag-whitespace --minify-js inline --output ../build/index.html index.html
+html-minifier --collapse-whitespace --quote-value \' --remove-comments --remove-tag-whitespace --minify-js inline --output ../build/404.html 404.html
+cleancss -O2 --output ../build/style.min.css ./css/*.css
+#Copy files to local server
 cd ../build/
-cp dialacarol.min.js /var/www/dialacarol/public_html/dialacarol.min.js
-rm /var/www/dialacarol/public_html/firebase-messaging-sw.js
-cp firebase-messaging-sw.js /var/www/dialacarol/public_html/firebase-messaging-sw.js
+cp -r ./* /var/www/dialacarol/public_html/
 
 #Take care of backend variable replacement
 cd ../backend/
