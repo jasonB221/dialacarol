@@ -14,7 +14,7 @@ rm *.js
 #Minify JS files
 cd ../web/
 uglifyjs ./js/*.js --compress --output ../build/dialacarol.min.js
-uglifyjs firebase-messaging-sw.js --compress --output firebase-messaging-sw.js
+uglifyjs firebase-messaging-sw.js --compress --output ../build/firebase-messaging-sw.js
 #Copy JS back over to local server
 cd ../build/
 cp dialacarol.min.js /var/www/dialacarol/public_html/dialacarol.min.js
