@@ -8,7 +8,9 @@ cp -r * ../build/
 cd ../build/
 #Delete Javascript files
 rm -rf js
-rm *.js
+rm firebase-messaging-sw.js
+#Delete CSS files
+rm -rf css
 #Minify all the files
 cd ../web/
 uglifyjs ./js/*.js --compress --output ../build/dialacarol.min.js
