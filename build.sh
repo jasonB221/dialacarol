@@ -1,3 +1,9 @@
+#Take care of NPM dependencies
+npm prune
+npm install
+npm install -g firebase-tools
+npm install -g uglify-es
+
 #Handle frontend deployment
 mkdir ./build
 cd web/
@@ -11,10 +17,12 @@ rm -rf js
 rm *.js
 #Minify JS files
 cd ../web/
-uglifyjs *.js ./js/*.js --compress --output ../build/dialacarol.min.js
+uglifyjs ./js/*.js --compress --output ../build/dialacarol.min.js
+uglifyjs firebase-messaging-sw.js --compress --output firebase-messaging-sw.js
 #Copy JS back over to local server
 cd ../build/
 cp dialacarol.min.js /var/www/dialacarol/public_html/dialacarol.min.js
+cp firebase-messaging-sw.js /var/www/dialacarol/public_html/firebase-messaging-sw.js
 
 #Take care of backend variable replacement
 cd ../backend/
