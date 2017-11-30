@@ -80,6 +80,6 @@ function setupRecieving(currToken, messaging){
     }
     //This code block registers any new users to recieve data from the /topics/songs messaging channel.
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", "https://dialacarol.bilas.org/registertopic.php?topic=songs&regtoken=" + currToken, true);
+    xmlHttp.open("GET", "/registerNotifications?token=" + currToken, true);
     xmlHttp.send(null);
 }
