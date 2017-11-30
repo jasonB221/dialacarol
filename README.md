@@ -1,5 +1,5 @@
-## Dial-A-Carol 2016
-![Build Status](https://build.code.bilas.org/buildStatus/icon?job=Dial-A-Carol_2016)
+## Dial-a-Carol
+![Build Status](https://build.code.bilas.org/buildStatus/icon?job=Dial-a-Carol)
 
 This project is designed to allow for [Dial-a-Carol][dialacarol] participants to see how many calls have come in, and where they are coming in from.
 #### How it works
