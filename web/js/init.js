@@ -45,7 +45,7 @@ function loadYear(year){
     // Load a year in the past
     global_yearLoaded = year;
 
-    if(!localStorage.getItem(year) == NULL){
+    if(!localStorage.getItem(year) == null){
         // Year is not in local cache, fetch it from the remote server
         var storageRef = firebase.storage().ref();
         var ref = storageRef.child("songs/songs-" + year);
