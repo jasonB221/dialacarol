@@ -1,6 +1,6 @@
 //This variable holds the current year loaded by the maps
 var global_yearLoaded;
-var global_currentYear = (new Date()).getCurrentYear();
+var global_currentYear = (new Date()).getFullYear();
 
 //This is the callback function that google maps calls
 function initMap(){
