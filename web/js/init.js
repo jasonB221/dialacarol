@@ -14,7 +14,7 @@ function initMap(){
     //Look for cookie and update notification status appropriatly
     if(localStorage.getItem("notification")){
         document.getElementById("notifications").checked = true;
-        setupRecieving();
+        setupNotifications();
     }
 
     markers = {}; //Initialize it with zero markers
