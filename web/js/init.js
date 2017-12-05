@@ -18,25 +18,29 @@ function initMap(){
     xmlHttp.onreadystatechange = function() {
         if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
             //Executes when the code returns
-            var list = JSON.parse(xmlHttp.responseText)['songs'];
-            var timer = setInterval(function (){
-                //Add calls to the map, 30 at a time
-                var temp = list.splice(0,30);
-                for(var i = 0; i < temp.length; i++){
-                    var songname = temp[i]['song'];
-                    var lat = temp[i]['lat'];
-                    var lng = temp[i]['lng'];
-                    addCall(songname, lat, lng);
-                }
-                if(list.length == 0){
-                    //When no calls are left, stop executing this
-                    clearInterval(timer);
-                }
-            }, 50);//Repeat every 50 milliseconds
+            addMultipleCalls(JSON.parse(xmlHttp.responseText)['songs']);
         }
     }
     xmlHttp.open("GET", "https://dialacarol.bilas.org/songs.json?t=" + (Date.now()/1000), true);
     xmlHttp.send(null);
+}
+
+//This function handles code for adding mass numbers of calls
+function addMultipleCalls(callArray){
+  var timer = setInterval(function (){
+      //Add calls to the map, 30 at a time
+      var temp = callArray.splice(0,30);
+      for(var i = 0; i < temp.length; i++){
+          var songname = temp[i]['song'];
+          var lat = temp[i]['lat'];
+          var lng = temp[i]['lng'];
+          addCall(songname, lat, lng);
+      }
+      if(list.length == 0){
+          //When no calls are left, stop executing this
+          clearInterval(timer);
+      }
+  }, 50);//Repeat every 50 milliseconds
 }
 
 //This function handles the code for managing notification permission requesting
