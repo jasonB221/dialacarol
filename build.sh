@@ -7,7 +7,7 @@ cd web/
 cp -r * ../build/
 cd ../build/
 #Delete Javascript files
-rm -rf js
+#rm -rf js
 rm firebase-messaging-sw.js
 #Delete CSS files
 rm -rf css
