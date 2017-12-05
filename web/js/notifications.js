@@ -1,7 +1,7 @@
 function notificationCheck(){
     var selection = document.getElementById("notifications");
     if(selection.checked){
-        localStorage.setIem("notification", "true");
+        localStorage.setItem("notification", "true");
         setupNotifications();
     } else {
         localStorage.setItem("notification", "false");
