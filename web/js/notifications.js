@@ -51,7 +51,7 @@ function setupRecieving(currToken, messaging){
 
     //This code block registers any new users to recieve data from the /topics/songs messaging channel.
     if(getCookie('token') != currToken){
-      document.cookie = "token=" + currToken + "; expires=Fri, Dec 31 " + (new Date()).getCurrentYear() + " 23:59:59 GMT";
+      document.cookie = "token=" + currToken + "; expires=Fri, Dec 31 " + (new Date()).getFullYear() + " 23:59:59 GMT";
       var xmlHttp = new XMLHttpRequest();
       xmlHttp.open("GET", "/registerNotifications?token=" + currToken, true);
       xmlHttp.send(null);

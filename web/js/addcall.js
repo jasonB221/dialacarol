@@ -10,7 +10,7 @@ function addCall(song, latitude, longitude){
   });
 
   //The part that adds the call
-  self.markerCluster.addMarker(marker);
+  global_cluster.addMarker(marker);
 
   //This section updates the call counters
   document.getElementById("count").innerHTML = parseInt(document.getElementById("count").innerHTML)+1; //Update raw call count
