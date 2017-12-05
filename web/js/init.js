@@ -36,7 +36,7 @@ function addMultipleCalls(callArray){
           var lng = temp[i]['lng'];
           addCall(songname, lat, lng);
       }
-      if(list.length == 0){
+      if(callArray.length == 0){
           //When no calls are left, stop executing this
           clearInterval(timer);
       }
