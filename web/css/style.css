@@ -16,9 +16,8 @@
     margin-bottom: 5px;
 }
 /*all of it*/
-body{
-    background-color: rgba(230, 230, 230, 0.5);
-}
+body{background-color: rgba(230, 230, 230, 0.5);}
+html{overflow: hidden;}
 
 #map{
     height: 800px;
