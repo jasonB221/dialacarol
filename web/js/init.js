@@ -12,7 +12,7 @@ function initMap(){
     });
 
     //Look for cookie and update notification status appropriatly
-    if(getCookie("notification")){
+    if(localStorage.getItem("notification")){
         document.getElementById("notifications").checked = true;
         setupRecieving();
     }

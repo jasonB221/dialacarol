@@ -1,10 +1,10 @@
 function notificationCheck(){
     var selection = document.getElementById("notifications");
     if(selection.checked){
-        document.cookie = "notifications=true; expires Fri, Dec 31, 9999 23:59:59 GMT";
+        localStorage.setIem("notification", "true");
         setupNotifications();
     } else {
-        document.cookie = "notifications=false; expires Fri, Dec 31, 9999 23:59:59 GMT";
+        localStorage.setItem("notification", "false");
         unsubNotifications();
     }
 }
