@@ -45,10 +45,10 @@ function loadYear(year){
     // Load a year in the past
     global_yearLoaded = year;
 
-    if(!localStorage.getItem(year) == null){
+    if(localStorage.getItem(year) == null){
         // Year is not in local cache, fetch it from the remote server
         var storageRef = firebase.storage().ref();
-        var ref = storageRef.child("songs/songs-" + year);
+        var ref = storageRef.child("songs/songs-" + year + ".json");
         ref.getDownloadURL().then(function(url){
             var xhr = new XMLHttpRequest();
             xhr.responseType = "json";
