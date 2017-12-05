@@ -28,6 +28,7 @@ body{
 }
 #container{
     position: relative;
+    top: -34px;
 }
 #mariah-counter{
 	color:#19962F;
@@ -60,6 +61,20 @@ body{
     display: inline-block;
     width: 60px;
     height: 34px;
+    position: relative;
+    text-align: left;
+    top: -40px;
+    left: 400px;
+    color: #9c9baa;
+    font-size: 20px;
+}
+
+#switch-label{
+    position: relative;
+    width: 200px;
+    top: 5px;
+    display: -webkit-box;
+    left: 70px;
 }
 
 /*Hide the checkbox for the switch*/
@@ -84,7 +99,7 @@ body{
     height: 26px;
     width: 26px;
     left: 4px;
-    right: 4px;
+    bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
