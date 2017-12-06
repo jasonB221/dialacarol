@@ -13,7 +13,7 @@ function initMap(){
 
     //Look for cookie and update notification status appropriatly
     if(localStorage.getItem("notification") == "true"){
-        document.getElementById("notifications").checked = true;
+        $("#notifications").prop('checked', true);
         setupNotifications();
     }
 
@@ -76,6 +76,6 @@ function loadYear(year){
 //This function resets the map to it's default state
 function clearMap(){
     global_cluster.clearMarkers();
-    document.getElementById("count").innerHTML = 0;
-    document.getElementById("mariah").innerHTML = 0;
+    $("#count").html("0");
+    $("#mariah").html("0");
 }
