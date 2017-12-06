@@ -1,8 +1,7 @@
 // This is the function called when the live notification switch is clicked
 function notificationCheck(){
-    var selection = document.getElementById("notifications");
-    if(selection.checked){
-        if(localStorage.getItem("modal") != true){
+    if($('#notifications').prop('checked')){
+        if(localStorage.getItem("modal") != "true"){
             $("#notifModal").modal('open');
         }
         else{
