@@ -119,10 +119,10 @@ input:checked + .slider-check:before {
 }
 
 /* Rounded sliders */
-.slider.round {
+.slider-check.round {
   border-radius: 34px;
 }
 
-.slider.round:before {
+.slider-check.round:before {
   border-radius: 50%;
 }
