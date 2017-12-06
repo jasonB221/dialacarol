@@ -33,6 +33,7 @@ function setupNotifications(){
                 if(err.code == "messaging/permission-blocked")
                     $("#notifDenied").modal('open');
                 $("#notifications").prop("checked", false);
+                localStorage.setItem("notification", "false")
                 console.log(err);
             });
         }
