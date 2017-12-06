@@ -12,6 +12,10 @@ $(document).ready(function(){
         localStorage.setItem("modal", "true");
         setupNotifications();
     });
+    $('#notifCan').click(function() {
+        alert("Modal cancelled");
+        $('#notifications').prop('checked', false);
+    });
 });
 
 //This is the callback function that google maps calls
