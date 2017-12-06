@@ -38,6 +38,7 @@ function loadYear(year){
     if(year == global_yearLoaded) return; //The map is already displaying the selected year
     if(year == global_currentYear){
         //loadCurrentYear();
+        global_yearLoaded = year;
         alert("Year set to current year: " + year);
         return;
     }
