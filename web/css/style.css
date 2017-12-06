@@ -80,7 +80,7 @@ html{overflow: hidden;}
 .switch input {display:none;}
 
 /*Slider*/
-.slider {
+.slider-check {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -92,7 +92,7 @@ html{overflow: hidden;}
     transition: .4s;
 }
 
-.slider:before {
+.slider-check:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -104,15 +104,15 @@ html{overflow: hidden;}
     transition: .4s;
 }
 
-input:checked + .slider {
+input:checked + .slider-check {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus + .slider-check {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked + .slider-check:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
