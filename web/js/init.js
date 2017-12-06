@@ -3,6 +3,11 @@ var global_yearLoaded;
 var global_currentYear = (new Date()).getFullYear();
 var global_cluster = null;
 
+//This is the code that initializes a few things, on document load
+$(document).ready(function(){
+    $('.modal').modal();
+});
+
 //This is the callback function that google maps calls
 function initMap(){
     map = new google.maps.Map(document.getElementById("map"), { //This data is outdated, you should manually adjust the map on the screen
