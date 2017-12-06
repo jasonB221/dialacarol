@@ -6,11 +6,11 @@ var global_cluster = null;
 //This is the code that initializes a few things, on document load
 $(document).ready(function(){
     $('.modal').modal();
-//    $('#notifModal').modal({
-//        dismissable: true
-//    });
     $('#notifEn').click(function(){
         alert("Modal accepted");
+        localStorage.setItem("notification", "true");
+        localStorage.setItem("modal", "true");
+        setupNotifications();
     });
 });
 

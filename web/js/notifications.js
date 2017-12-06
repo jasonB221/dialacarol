@@ -1,14 +1,14 @@
+// This is the function called when the live notification switch is clicked
 function notificationCheck(){
     var selection = document.getElementById("notifications");
     if(selection.checked){
         if(localStorage.getItem("modal") != true){
-            $("#notifModal").modal('open', {
-                dismissable: true,
-                complete: function(){alert("Modal Closed");}
-            });
+            $("#notifModal").modal('open');
         }
-        localStorage.setItem("notification", "true");
-        setupNotifications();
+        else{
+            localStorage.setItem("notification", "true");
+            setupNotifications();
+        }
     } else {
         localStorage.setItem("notification", "false");
         unsubNotifications();
