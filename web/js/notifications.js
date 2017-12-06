@@ -22,21 +22,16 @@ function setupNotifications(){
         if(currToken){
             setupRecieving(currToken, messaging);
         } else {
-            //Executes when permission for sending notifications is denied
+            //Executes when there isn't a token
             console.log("No current token");
             messaging.requestPermission().then(function() {
                 messaging.getToken().then(function(currToken){
-                    if(currToken) {
-                        setupRecieving(currToken, messaging);
-                    } else {
-                        //There is something really wrong. You should not hit this code under any normal circumstances
-                        console.log("Something screwed up");
-                        alert("There is an internal error. Try reloading the page. Notifications may not work.");
-                    }
+                    setupRecieving(currToken, messaging);
                 });
             }).catch(function(err) {
                 //Code that executes when permission is denied
-                alert("This requires notifications to work. You will have to reload the page to get updates.");
+                $("#notifDenied").modal('open');
+                $('#notifications').prop('clicked', false);
                 console.log(err);
             });
         }
