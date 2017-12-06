@@ -55,6 +55,11 @@ html{overflow: hidden;}
     color: #9C9BAA;
 }
 
+#notifEn{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
 /*Switch Styling*/
 .switch {
     position: relative;
