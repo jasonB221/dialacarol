@@ -44,7 +44,7 @@ function loadYear(year){
     if(year == global_currentYear){
         //loadCurrentYear();
         global_yearLoaded = year;
-        alert("Year set to current year: " + year);
+//        alert("Year set to current year: " + year);
         return;
     }
     else if(year > global_currentYear){
