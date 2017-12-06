@@ -30,7 +30,8 @@ function setupNotifications(){
                 });
             }).catch(function(err) {
                 //Code that executes when permission is denied
-                $("#notifDenied").modal('open');
+                if(err.code == "messaging/permission-blocked")
+                    $("#notifDenied").modal('open');
                 $("#notifications").prop("checked", false);
                 console.log(err);
             });
