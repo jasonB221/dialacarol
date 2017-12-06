@@ -31,7 +31,7 @@ function setupNotifications(){
             }).catch(function(err) {
                 //Code that executes when permission is denied
                 $("#notifDenied").modal('open');
-                $('#notifications').prop('clicked', false);
+                $("#notifications").prop("checked", false);
                 console.log(err);
             });
         }
