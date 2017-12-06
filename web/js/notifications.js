@@ -1,6 +1,12 @@
 function notificationCheck(){
     var selection = document.getElementById("notifications");
     if(selection.checked){
+        if(localStorage.getItem("modal") != true){
+            $("#notifModal").modal('open', {
+                dismissable: true,
+                complete: function(){alert("Modal Closed");}
+            });
+        }
         localStorage.setItem("notification", "true");
         setupNotifications();
     } else {
