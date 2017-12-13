@@ -1,18 +1,18 @@
-//This is the callback function that google maps calls 
+//This is the callback function that google maps calls
 function initMap(){
     map = new google.maps.Map(document.getElementById("map"), { //This data is outdated, you should manually adjust the map on the screen
         zoom: 3,
         center: {lat:19.4582, lng:12.837838},
         mapTypeId: 'roadmap'
     });
-    
+
     //Disable recieving new calls. Map is for info/historical purposes only now.
     //setupNotifications();
-    
+
     markers = {}; //Initialize it with zero markers
-    markerCluster = new MarkerClusterer(map, markers, 
+    markerCluster = new MarkerClusterer(map, markers,
         {imagePath: '/images/m', gridSize: 18});
-    
+
     //This block of code requests all the previously recorded songs
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
@@ -80,6 +80,6 @@ function setupRecieving(currToken, messaging){
     }
     //This code block registers any new users to recieve data from the /topics/songs messaging channel.
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", "https://dialacarol.bilas.org/registertopic.php?topic=songs&regtoken=" + currToken, true);
+    xmlHttp.open("GET", "https://dialacarol.bilas.org/registertopic.php?topic=songs-2017&regtoken=" + currToken, true);
     xmlHttp.send(null);
 }
