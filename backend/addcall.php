@@ -75,6 +75,7 @@
     if($response["status"] !== "OK"){
       http_response_code(500);
       echo "Connection issue between server and google.";
+      echo json_encode($response);
       exit(1);
     }
 
