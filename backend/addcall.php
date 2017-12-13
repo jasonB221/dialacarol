@@ -30,26 +30,26 @@
   $db_connection = new mysqli($db_host, $db_user, $db_pass, $db_name, $db_port);
   if($db_connection->connect_errno){
     http_response_code(500);
-//    echo "Failed to connect to MySQL: (" . $db_connection->connect_errno . ") " . $db_connection->connect_error;
+    echo "Failed to connect to MySQL: (" . $db_connection->connect_errno . ") " . $db_connection->connect_error;
     exit(1);
   }
 
   //Prepare a statement to run, so as to sanitize inputs
   if (!($stmt = $db_connection->prepare("SELECT latitude,longitude FROM geolookup WHERE city=? AND state=? AND country=?;"))) {
     http_response_code(500);
-//    echo "Prepare failed: (" . $db_connection->errno . ") " . $db_connection->error;
+    echo "Prepare failed: (" . $db_connection->errno . ") " . $db_connection->error;
     exit(1);
   }
   if (!$stmt->bind_param("sss", $city, $state, $country)) {
     http_response_code(500);
-//    echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
+    echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
     exit(1);
   }
 
   //Run the statement and store in result
   if (!$stmt->execute()) {
     http_response_code(500);
-//    echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+    echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
     exit(1);
   }
   $stmt->store_result();
@@ -74,7 +74,7 @@
     //First check to make sure it is a valid response
     if($response["status"] !== "OK"){
       http_response_code(500);
-//      echo "Connection issue between server and google.";
+      echo "Connection issue between server and google.";
       exit(1);
     }
 
@@ -85,17 +85,17 @@
     //Now that we have the results, update the db so we don't need to query google again.
     if (!($stmt = $db_connection->prepare( "INSERT INTO geolookup(city, state, country, latitude, longitude) VALUES (?, ?, ?, ?, ?);" ))) {
       http_response_code(500);
-//      echo "Prepare failed: (" . $db_connection->errno . ") " . $db_connection->error;
+      echo "Prepare failed: (" . $db_connection->errno . ") " . $db_connection->error;
       exit(1);
     }
     if (!$stmt->bind_param("sssdd", $city, $state, $country, $latitude, $longitude)) {
       http_response_code(500);
-//      echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
+      echo "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error;
       exit(1);
     }
     if (!$stmt->execute()) {
       http_response_code(500);
-//      echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
+      echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
       exit(1);
     }
   }
@@ -150,6 +150,6 @@
   curl_close($request);
 
   //We are done executing the script. The rest of the statements are for debugging only.
-  //file_put_contents("fcm_log.txt", $response);
+  file_put_contents("fcm_log.txt", $response);
 
 ?>
