@@ -6,8 +6,8 @@ function initMap(){
         mapTypeId: 'roadmap'
     });
 
-    //Disable recieving new calls. Map is for info/historical purposes only now.
-    //setupNotifications();
+    //Set up notifications for recieving calls on the fly
+    setupNotifications();
 
     markers = {}; //Initialize it with zero markers
     markerCluster = new MarkerClusterer(map, markers,
