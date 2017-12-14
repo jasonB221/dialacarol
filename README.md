@@ -1,5 +1,5 @@
-## Dial-A-Carol 2016
-![Build Status](https://build.code.bilas.org/buildStatus/icon?job=Dial-A-Carol_2016)
+## Dial-A-Carol
+![Build Status](https://build.code.bilas.org/buildStatus/icon?job=Dial-A-Carol)
 
 This project is designed to allow for [Dial-a-Carol][dialacarol] participants to see how many calls have come in, and where they are coming in from.
 #### How it works
@@ -7,9 +7,9 @@ This project is designed to allow for [Dial-a-Carol][dialacarol] participants to
 * That script makes a call to a [php file](backend/addcall.php), which does the following:
   1. Checks a database to see if the specified location has already been queried
   2. If not, ask Google for location data and add it to the database for future reference
-  3. Write the location and song name to a json file for clients to pull when initially connecting
+  3. Write the location and song name to a JSON file for clients to pull when initially connecting
   4. Send a Firebase notification to all the connected clients
-* The [client](proxy/index.html) registers a [service worker](proxy/firebase-messaging-sw.js) which recieves the notification, and processes it.
+* The [client](proxy/index.html) registers a [service worker](proxy/firebase-messaging-sw.js) which receives the notification, and processes it.
 * The map is updated with another marker.
 
 #### License
