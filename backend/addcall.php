@@ -70,18 +70,21 @@
     curl_close($request);
     $response = json_decode($response, true);
 
+    $latitude = 37.09024;
+    $longitude = -95.712891;
+
     //Now that we have the response, do some processing
     //First check to make sure it is a valid response
     if($response["status"] !== "OK"){
       http_response_code(500);
       echo "Connection issue between server and google.";
       echo json_encode($response);
-      exit(1);
+//      exit(1);
+    } else {
+      //Actually extract the working latitude and longitude from the response
+      $latitude = $response["results"][0]["geometry"]["location"]["lat"];
+      $longitude = $response["results"][0]["geometry"]["location"]["lng"];
     }
-
-    //Actually extract the working latitude and longitude from the response
-    $latitude = $response["results"][0]["geometry"]["location"]["lat"];
-    $longitude = $response["results"][0]["geometry"]["location"]["lng"];
 
     //Now that we have the results, update the db so we don't need to query google again.
     if (!($stmt = $db_connection->prepare( "INSERT INTO geolookup(city, state, country, latitude, longitude) VALUES (?, ?, ?, ?, ?);" ))) {
