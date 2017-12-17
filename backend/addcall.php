@@ -144,7 +144,7 @@
   $fcm_json = json_encode($fcm_array);
 
   //Send the json message to the FCM servers
-  $request = curl_init();
+  /*$request = curl_init();
   curl_setopt($request, CURLOPT_HTTPHEADER, $fcm_header_array);
   curl_setopt($request, CURLOPT_CUSTOMREQUEST, "POST");
   curl_setopt($request, CURLOPT_POSTFIELDS, $fcm_json);
@@ -152,7 +152,7 @@
   curl_setopt($request, CURLOPT_URL, "https://fcm.googleapis.com/fcm/send");
   $response = curl_exec($request); //We have the response if we want to do anything with it. For now, we discard it.
   curl_close($request);
-
+*/
   //We are done executing the script. The rest of the statements are for debugging only.
   file_put_contents("fcm_log.txt", $response);
 
